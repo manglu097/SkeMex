@@ -11,6 +11,7 @@
     <img src="https://img.shields.io/badge/Adaptation-No_weight_updates-16a085.svg" alt="No weight updates">
   </p>
   <p>
+    🌐 <a href="https://manglu097.github.io/SkeMex/">Project site</a> ·
     📄 <a href="https://arxiv.org/abs/2606.09365v3">Paper</a> ·
     🚀 <a href="#-quick-start">Quick start</a> ·
     🗂️ <a href="data/README.md">Data</a> ·
