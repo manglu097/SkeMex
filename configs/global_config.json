@@ -1,0 +1,102 @@
+{
+  "max_steps": 7,
+  "output_dir": "output",
+  "history_filename": "interaction_history.jsonl",
+  "tools": {
+    "shared": {
+      "openai_api_key": "${OPENAI_API_KEY}",
+      "openai_api_base": "${OPENAI_BASE_URL}",
+      "tavily_api_key": "${TAVILY_API_KEY}",
+      "tavily_api_keys": [],
+      "umls_api_key": "${UMLS_API_KEY}",
+      "ncbi_api_key": "${NCBI_API_KEY}",
+      "semantic_scholar_api_key": "${SEMANTIC_SCHOLAR_API_KEY}"
+    },
+    "tavily_search": {
+      "search_depth": "basic",
+      "topic": "general",
+      "include_answer": "advanced",
+      "max_results": 3,
+      "timeout_seconds": 30
+    },
+    "medrag_search": {
+      "llm_name": "OpenAI/MiniMax-M2.7-highspeed",
+      "default_corpus": "PubMed",
+      "retriever": "MedCPT",
+      "db_dir": "${MEDRAG_CORPUS_DIR}",
+      "top_k": 3,
+      "temperature": 0.6,
+      "top_p": 1.0,
+      "timeout_seconds": 30,
+      "corpus_cache": true,
+      "HNSW": true
+    },
+    "umls_concept_lookup": {
+      "max_results": 3,
+      "timeout_seconds": 20
+    },
+    "drug_info_lookup": {
+      "drugbank_path": "${DRUGBANK_PATH}",
+      "timeout_seconds": 20
+    },
+    "drug_interaction_check": {
+      "drugbank_path": "${DRUGBANK_PATH}",
+      "timeout_seconds": 20
+    },
+    "analyze_medical_image": {
+      "model": "Hulu-Med-32B",
+      "api_base": "${VISION_BASE_URL}",
+      "temperature": 0.6,
+      "top_p": 1.0,
+      "max_tokens": 4096,
+      "timeout_seconds": 60,
+      "api_key": "${VISION_API_KEY}"
+    },
+    "ocr_chart_reader": {
+      "model": "qwen-vl-ocr-2025-11-20",
+      "temperature": 0.1,
+      "top_p": 1.0,
+      "max_tokens": 8192,
+      "timeout_seconds": 60
+    },
+    "reflection": {
+      "temperature": 0.1,
+      "top_p": 1.0,
+      "max_tokens": 4096,
+      "timeout_seconds": 60
+    },
+    "verifier": {
+      "model": "deepseek-v3.2",
+      "temperature": 0.1,
+      "top_p": 1.0,
+      "max_tokens": 4096,
+      "timeout_seconds": 60
+    },
+    "agentclinic_patient_reply": {
+      "model": "MiniMax-M2.7-highspeed",
+      "temperature": 0.6,
+      "top_p": 1.0,
+      "max_tokens": 512,
+      "timeout_seconds": 60,
+      "max_sentences": 3
+    },
+    "agentclinic_request_exam": {
+      "model": "MiniMax-M2.7-highspeed",
+      "temperature": 0.6,
+      "top_p": 1.0,
+      "max_tokens": 1024,
+      "timeout_seconds": 60
+    },
+    "agentclinic_request_image": {
+      "image_root_dir": "${AGENTCLINIC_IMAGE_ROOT}"
+    },
+    "mediq_patient_reply": {
+      "model": "MiniMax-M2.7-highspeed",
+      "temperature": 0.6,
+      "top_p": 1.0,
+      "max_tokens": 256,
+      "timeout_seconds": 60,
+      "max_sentences": 3
+    }
+  }
+}

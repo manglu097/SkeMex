@@ -1,0 +1,12 @@
+{
+  "active": [
+    {"label": "information_gathering", "description": "Gathering patient history, symptoms, and clinical information"},
+    {"label": "differential_diagnosis", "description": "Generating and refining differential diagnoses based on clinical reasoning"},
+    {"label": "treatment_planning", "description": "Formulating treatment or management plans"},
+    {"label": "medical_imaging_interpretation", "description": "Interpreting medical imaging results such as CT, MRI, or X-ray"},
+    {"label": "physical_exam_request", "description": "Deciding when and what physical examinations to request"},
+    {"label": "patient_communication", "description": "Communicating with patients or explaining medical concepts"},
+    {"label": "meta_memory", "description": "Context management and memory control tasks within long context"}
+  ],
+  "pending": []
+}

@@ -1,0 +1,48 @@
+{
+  "seed": 42,
+  "recipes": {
+    "healthbench": {
+      "sample_ratio": 0.35
+    },
+    "liveclin_text": {
+      "ratios": {
+        "Chapter 2: Neoplasms": 0.05,
+        "Chapter 6: Diseases of the nervous system": 0.06,
+        "Chapter 1: Certain infectious and parasitic diseases": 0.07,
+        "Chapter 11: Diseases of the digestive system": 0.07,
+        "Chapter 3: Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism": 0.07,
+        "Chapter 9: Diseases of the circulatory system": 0.07,
+        "Chapter 4: Endocrine, nutritional and metabolic diseases": 0.08,
+        "Chapter 14: Diseases of the genitourinary system": 0.08,
+        "Chapter 13: Diseases of the musculoskeletal system and connective tissue": 0.08,
+        "Chapter 19: Injury, poisoning and certain other consequences of external causes": 0.09,
+        "Chapter 15: Pregnancy, childbirth and the puerperium AND Certain conditions originating in the perinatal period": 0.09,
+        "Chapter 10: Diseases of the respiratory system": 0.1,
+        "Chapter 5: Mental and behavioural disorders": 0.15,
+        "Chapter 7: Diseases of the eye and adnexa": 0.15,
+        "Chapter 12: Diseases of the skin and subcutaneous tissue": 0.2,
+        "Chapter 8: Diseases of the ear and mastoid process": 0.25
+      },
+      "default_ratio": 0.08
+    },
+    "liveclin_mm": {
+      "ratios": {
+        "Chapter 5: Mental and behavioural disorders": 0.5,
+        "Chapter 8: Diseases of the ear and mastoid process": 0.5,
+        "Chapter 2: Neoplasms": 0.07
+      },
+      "default_ratio": 0.1
+    },
+    "mediq": {
+      "sample_ratio": 0.1
+    },
+    "medjourney": {
+      "ratios": {
+        "tp": 0.5,
+        "ep": 0.2,
+        "mp": 0.05,
+        "dp": 0.03
+      }
+    }
+  }
+}

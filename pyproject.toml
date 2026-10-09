@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skemex"
+version = "0.1.0"
+description = "Self-evolving skill memory for medical agent reasoning"
+requires-python = ">=3.10"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "SkeMex authors"}]
+dependencies = ["openai>=1.30,<3", "tqdm>=4.66,<5", "pandas>=2,<3"]
+
+[project.urls]
+Paper = "https://arxiv.org/abs/2606.09365v3"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+medmem_agent = ["evolution_assets/*.json", "evolution_assets/meta_memory/*.md"]

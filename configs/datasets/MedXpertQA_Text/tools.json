@@ -1,0 +1,48 @@
+{
+  "dataset_name": "MedXpertQA_Text",
+  "tools": [
+    {
+      "name": "tavily_search",
+      "type": "tavily_search",
+      "search_depth": "advanced"
+    },
+    {
+      "name": "medrag_search",
+      "type": "medrag_search",
+      "default_corpus": "MedCorp",
+      "top_k": 7
+    },
+    {
+      "name": "drug_info_lookup",
+      "type": "drug_info_lookup"
+    },
+    {
+      "name": "drug_interaction_check",
+      "type": "drug_interaction_check"
+    },
+    {
+      "name": "umls_concept_lookup",
+      "type": "umls_concept_lookup"
+    },
+    {
+      "name": "python_calculator",
+      "type": "python_calculator"
+    },
+    {
+      "name": "unit_converter",
+      "type": "unit_converter"
+    },
+    {
+      "name": "clinical_score_calculator",
+      "type": "clinical_score_calculator"
+    },
+    {
+      "name": "reflection",
+      "type": "reflection"
+    },
+    {
+      "name": "verifier",
+      "type": "verifier"
+    }
+  ]
+}

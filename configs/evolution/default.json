@@ -1,0 +1,131 @@
+{
+  "enabled": false,
+  "mode": "online",
+  "api": {
+    "provider": "openai_compatible",
+    "api_base": "${OPENAI_BASE_URL}",
+    "api_key": "${OPENAI_API_KEY}"
+  },
+  "retrieval": {
+    "top_k": 6,
+    "lambda_similarity": 0.4,
+    "lambda_utility": 0.4,
+    "lambda_memory": 0.2,
+    "min_similarity_threshold": 0.2,
+    "prefer_mature_bonus_ratio": 0.1,
+    "embedding_model": "text-embedding-3-large",
+    "pre_screen": {
+      "enabled": true,
+      "model": "deepseek-v3.2",
+      "skip_threshold": 5,
+      "top_k_per_branch": 5,
+      "timeout_seconds": 120,
+      "max_tokens": 1024,
+      "temperature": 0.2
+    }
+  },
+  "categories": {
+    "classifier_model": "deepseek-v3.2",
+    "max_selected_categories": 1,
+    "new_category_promote_threshold": 1,
+    "classifier_mode": "always"
+  },
+  "buffer": {
+    "window_size": 30,
+    "capacity": 20,
+    "min_positive_ratio": 0.2,
+    "min_negative_ratio": 0.2,
+    "value_alpha": 1.0,
+    "value_beta": 1.0,
+    "simple_success_step_threshold": 2,
+    "loop_repeat_threshold": 3,
+    "max_repetitive_chars": 12800,
+    "drop_max_steps_stop_trajectory": true,
+    "max_steps_stop_text": "Agent stopped: max_steps reached without producing a final answer. Please try rephrasing your question or increasing max_steps."
+  },
+  "encode": {
+    "model": "deepseek-v3.2",
+    "draft_initial_utility": 0.5,
+    "trigger_on_window_end": true
+  },
+  "utility": {
+    "negative_base_penalty": 0.1,
+    "negative_harm_scale": 0.5,
+    "positive_advantage_scale": 1.0,
+    "category_ema_alpha": 0.2,
+    "category_ema_min_samples": 3,
+    "category_ema_default": 0.5,
+    "risk_penalty_high_negative_ratio": 0.1,
+    "utility_clip_min": 0.0,
+    "utility_clip_max": 1.0,
+    "memory_tau_base_windows": 4.0,
+    "memory_tau_max_windows": 20.0,
+    "lr_warmup_steps": 5,
+    "lr_max": 0.2,
+    "lr_base": 0.05,
+    "lr_decay_steps": 20
+  },
+  "governance": {
+    "manage_every_n_windows": 2,
+    "merge_similarity_threshold": 0.8,
+    "deprecate_utility_threshold": 0.3,
+    "mature_utility_threshold": 0.75,
+    "mature_usage_threshold": 15,
+    "capacity_general": 12,
+    "capacity_task_level_per_category": 8,
+    "capacity_action_level_per_tool": 5,
+    "capacity_meta_memory": 5
+  },
+  "context_guard": {
+    "token_budget": 16384,
+    "loop_break_repeat_threshold": 3,
+    "key_finding_pin_step": 5,
+    "context_trim_ratio": 0.8,
+    "context_trim_keep_last_n_steps": 3,
+    "context_trim_observation_chars": 200
+  },
+  "storage": {
+    "root_dir": "skills",
+    "experiment_root": "skills/default_experiment",
+    "skills_dirname": "skills",
+    "index_dirname": "index",
+    "embeddings_dirname": "embeddings",
+    "traces_dirname": "usage_traces",
+    "meta_memory_dirname": "meta_memory",
+    "file_lock_timeout_seconds": 10
+  },
+  "offline": {
+    "freeze_skill_library_during_test": true,
+    "train_split_path": "",
+    "test_split_path": "",
+    "train_root": "",
+    "test_root": "",
+    "selected_benches": [],
+    "shuffle_seed": 42,
+    "evaluation": {
+      "enabled": true,
+      "granularity": "epoch",
+      "evaluate_every_n_epochs": 1,
+      "evaluate_every_n_windows": 1,
+      "selected_benches": []
+    },
+    "epochs": 1,
+    "max_train_samples_per_dataset": 0,
+    "max_test_samples_per_dataset": 0,
+    "run_mode": "train_then_eval"
+  },
+  "online": {
+    "benchmark_root": "",
+    "selected_benches": [],
+    "shuffle_seed": 42,
+    "epochs": 1,
+    "evaluation": {
+      "enabled": true,
+      "granularity": "epoch",
+      "evaluate_every_n_epochs": 1,
+      "evaluate_every_n_windows": 1,
+      "selected_benches": []
+    },
+    "max_samples_per_dataset": 0
+  }
+}

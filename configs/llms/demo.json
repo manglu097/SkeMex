@@ -1,0 +1,10 @@
+{
+  "provider": "openai_compatible",
+  "model": "deepseek-v3.2",
+  "api_base": "${OPENAI_BASE_URL}",
+  "api_key": "${OPENAI_API_KEY}",
+  "temperature": 0.2,
+  "max_tokens": 16384,
+  "timeout_seconds": 3000,
+  "supports_vision": false
+}

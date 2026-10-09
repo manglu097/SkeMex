@@ -1,0 +1,10 @@
+{
+  "model": "gemini-3-flash-preview",
+  "api_base": "${JUDGE_BASE_URL}",
+  "api_key": "${JUDGE_API_KEY}",
+  "temperature": 0.0,
+  "max_tokens": 512,
+  "max_retries": 3,
+  "retry_delay": 2.0,
+  "mc_mode": "exact"
+}

@@ -1,0 +1,85 @@
+{
+  "links_checked": "2026-10-08",
+  "note": "Official project/data links. Snapshot descriptions identify locally inspected inputs; they do not pin upstream revisions. No automatic downloads.",
+  "benchmarks": [
+    {
+      "name": "AgentClinic",
+      "datasets": [
+        "AgentClinic_Text",
+        "AgentClinic_MM"
+      ],
+      "github": "https://github.com/samuelschmidgall/agentclinic",
+      "snapshot": "Extended MedQA (text) and extended NEJM (multimodal) cases"
+    },
+    {
+      "name": "HealthBench",
+      "datasets": [
+        "healthbench"
+      ],
+      "github": "https://github.com/openai/simple-evals",
+      "huggingface": "https://huggingface.co/datasets/openai/healthbench",
+      "snapshot": "HealthBench Hard; local source filename hard_2025-05-08-21-00-10.jsonl"
+    },
+    {
+      "name": "LiveClin",
+      "datasets": [
+        "LiveClin_Text",
+        "LiveClin_MM"
+      ],
+      "github": "https://github.com/AQ-MedAI/LiveClin",
+      "huggingface": "https://huggingface.co/datasets/AQ-MedAI/LiveClin",
+      "snapshot": "2025_H1; local stage-level text/image separation"
+    },
+    {
+      "name": "LiveMedBench",
+      "datasets": [
+        "LiveMedBench"
+      ],
+      "huggingface": "https://huggingface.co/datasets/JuelieYann/LiveMedBench",
+      "snapshot": "v202602; sampled and translated English local records"
+    },
+    {
+      "name": "MediQ",
+      "datasets": [
+        "MediQ"
+      ],
+      "github": "https://github.com/stellalisy/MediQ",
+      "snapshot": "MedQA test conversations (medqa_test_convo.jsonl)"
+    },
+    {
+      "name": "MedJourney",
+      "datasets": [
+        "MedJourney"
+      ],
+      "github": "https://github.com/Medical-AI-Learning/MedJourney",
+      "snapshot": "tp / ep / mp / dp tasks; sampled and translated English local records"
+    },
+    {
+      "name": "MedXpertQA",
+      "datasets": [
+        "MedXpertQA_Text",
+        "MedXpertQA_MM"
+      ],
+      "github": "https://github.com/TsinghuaC3I/MedXpertQA",
+      "huggingface": "https://huggingface.co/datasets/TsinghuaC3I/MedXpertQA",
+      "snapshot": "Separate Text and MM test subsets"
+    },
+    {
+      "name": "MMMU",
+      "datasets": [
+        "MMMU"
+      ],
+      "github": "https://github.com/MMMU-Benchmark/MMMU",
+      "huggingface": "https://huggingface.co/datasets/MMMU/MMMU",
+      "snapshot": "Health & Medicine; local all_test_hard_sampled.jsonl"
+    },
+    {
+      "name": "MMMU-Pro",
+      "datasets": [
+        "MMMU_Pro"
+      ],
+      "huggingface": "https://huggingface.co/datasets/MMMU/MMMU_Pro",
+      "snapshot": "Health & Medicine; local test_medical_hard_sampled.jsonl"
+    }
+  ]
+}

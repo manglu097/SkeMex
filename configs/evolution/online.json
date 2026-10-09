@@ -1,0 +1,46 @@
+{
+  "enabled": true,
+  "mode": "online",
+  "storage": {
+    "experiment_root": "skills/online",
+    "skills_dirname": "skills",
+    "index_dirname": "index",
+    "embeddings_dirname": "embeddings",
+    "traces_dirname": "usage_traces",
+    "meta_memory_dirname": "meta_memory"
+  },
+  "buffer": {
+    "drop_max_steps_stop_trajectory": true,
+    "max_steps_stop_text": "Agent stopped: max_steps reached without producing a final answer. Please try rephrasing your question or increasing max_steps."
+  },
+  "online": {
+    "benchmark_root": "data/test",
+    "selected_benches": [],
+    "shuffle_seed": 42,
+    "epochs": 3,
+    "evaluation": {
+      "enabled": false,
+      "granularity": "epoch",
+      "evaluate_every_n_epochs": 1,
+      "evaluate_every_n_windows": 1,
+      "selected_benches": []
+    },
+    "max_samples_per_dataset": 0
+  },
+  "offline": {
+    "train_root": "",
+    "test_root": "",
+    "selected_benches": [],
+    "shuffle_seed": 42,
+    "evaluation": {
+      "enabled": true,
+      "granularity": "epoch",
+      "evaluate_every_n_epochs": 1,
+      "evaluate_every_n_windows": 1,
+      "selected_benches": []
+    },
+    "epochs": 1,
+    "max_train_samples_per_dataset": 0,
+    "max_test_samples_per_dataset": 0
+  }
+}
