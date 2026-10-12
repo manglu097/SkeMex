@@ -4,7 +4,7 @@
   <h3>Experience Makes Skillful</h3>
   <p><b>Enabling Generalizable Medical Agent Reasoning<br>via Self-Evolving Skill Memory</b></p>
   <p>
-    <a href="https://arxiv.org/abs/2606.09365v3"><img src="https://img.shields.io/badge/arXiv-2606.09365-b31b1b.svg" alt="arXiv"></a>
+    <a href="https://arxiv.org/abs/2606.09365"><img src="https://img.shields.io/badge/arXiv-2606.09365-b31b1b.svg" alt="arXiv"></a>
     <img src="https://img.shields.io/badge/NeurIPS-2026-6846e8.svg" alt="NeurIPS 2026">
     <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB.svg?logo=python&logoColor=white" alt="Python 3.10+">
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"></a>
